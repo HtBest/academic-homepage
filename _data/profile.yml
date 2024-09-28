@@ -1,18 +1,18 @@
-primary_name: "Your Name"
+primary_name: "Zixu (Tao) He"
 secondary_name: ""
-navbar_name: "Your Name"
+navbar_name: "Tao He"
 
 positions:
-- logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-  name: Position 1 with logo
-- name: Position 2 without logo
+- logo: https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png  # Logo is optional
+  name: UNSW Sydney
+# - name: Position 2 without logo
 
 
-email: "your@email.com"
+email: "tao.he@student.unsw.edu.au"
 # cv_link: link-to-your-cv-file
-gscholar: your_google_scholar_id
-github: your_github_id
-twitter: your_twitter_id
+gscholar: W7lgt2EAAAAJ&hl=en
+github: htbest
+# twitter: your_twitter_id
 # wechat_qrcode: /assets/images/etc/wechat.jpg
 # wechat_prompt: >-
 #   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
@@ -21,22 +21,22 @@ twitter: your_twitter_id
 
 short_bio: >-
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      I am an Honours student at UNSW, fortunate to be supervised by Serge Gaspers. 
   </p>
   <p>
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      My research interests lie in theoretical computer science, with a focus on algorithms and fine-grained complexity.
   </p>
 
-portrait_url: /assets/images/photos/portrait.jpg
+
+portrait_url: /assets/images/photos/profile.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
-  position: Ph.D. Student in Computer Science
-  date: Sep. 2024 - present
+- name: University of New South Wales
+  logo: https://engagementaustralia.org.au/wp-content/uploads/2023/04/new-UNSW-logo-png-vertical-crest.png
+  position: Bachelor (Honours) Student in Computer Science
+  date: Sep. 2021 - present
 
 # experience:
 # - name: Peking University
@@ -46,9 +46,14 @@ education:
 
 
 awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+- name: <a href="https://www.unsw.edu.au/engineering/student-life/prizes-awards/deans-honours-list-deans-award-recipients-archive">UNSW Engineering Dean’s Honours List</a>
+  date: 2023
+- name: <a href="https://ieeextreme.org/ieeextreme-17-0-ranking/">6th Place worldwide and 1st in Australia in IEEEXtreme</a>
+  date: 2023
+- name: 1st Place in International Collegiate Programming Contest Regional Finals
+  date: 2022 & 2023
+- name: <a href="https://ieeextreme.org/ieeextreme-16-0-ranking/">5th Place worldwide and 1st in Australia in IEEEXtreme</a>
+  date: 2022
+# - name: Bronze Medal in Chinese National Olympiad in Informatics
+#   date: 2019
+
