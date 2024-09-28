@@ -1,0 +1,28 @@
+---
+layout: default
+title: Resume
+navbar_title: Resume
+body_attr: ''
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center pt-4">Resume</h3>
+
+            <div class="bg-light p-3 my-2 rounded border">
+
+                <embed src="assets/images/resume.pdf" type="application/pdf" width="100%" style="height: 70vh;" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // Example: If you want to generate PDF from this resume page
+    document.addEventListener("DOMContentLoaded", function () {
+        const element = document.querySelector('.container');
+        html2pdf().from(element).save('resume.pdf');
+    });
+</script>
