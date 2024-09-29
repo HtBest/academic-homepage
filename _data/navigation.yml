@@ -6,6 +6,6 @@ pages:
 # - name: People
 #   url: /people
 - name: Resume
-  url: /assets/images/resume.pdf
+  url: /resume.pdf
 # - name: Links
 #   url: /links
