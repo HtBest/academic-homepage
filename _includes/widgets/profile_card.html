@@ -10,50 +10,44 @@
                         <div class="text-profile-position">
                             {% for position in site.data.profile.positions %}
                             {% if position.logo -%}
-                            <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
+                            <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge" />
                             {%- endif %}
-                            {{ position.name }}<br/>
+                            {{ position.name }}<br />
                             {% endfor %}
                         </div>
                         <div class="text-profile-bio mt-3">
                             {{ site.data.profile.short_bio }}
                         </div>
                         {% if site.data.profile.cv_link %}
-                            <a target="_blank" href="{{ site.data.profile.cv_link }}"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
+                        <a target="_blank" href="{{ site.data.profile.cv_link }}"><i class="fas fa-file-alt"></i>
+                            Curriculum Vitae</a> <br />
                         {% endif %}
                     </div>
                     {% if site.data.profile.portrait_url %}
                     <div class="col-md-auto">
                         <figure class="figure">
-                            <img 
-                                src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="figure-img img-fluid img-thumbnail" 
-                                style="height: 200px;"
-                                data-toggle="tooltip" 
-                                data-placement="top" 
-                                title="{{ site.data.profile.portrait_caption }}"
-                            >
+                            <img src="{{ site.data.profile.portrait_url | relative_url }}"
+                                class="figure-img img-fluid img-thumbnail" style="height: 200px;" data-toggle="tooltip"
+                                data-placement="top" title="{{ site.data.profile.portrait_caption }}">
                             <figcaption class="figure-caption text-right"></figcaption>
                         </figure>
                     </div>
                     {% endif %}
-        
+
                 </div>
                 <hr />
                 <div class="row">
                     <div class="col">
-                        <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
-                        </a>
-
                         {% if site.data.profile.gscholar %}
-                        <a class="pr-3 no-break" target="_blank" href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}&hl=en">
+                        <a class="pr-3 no-break" target="_blank"
+                            href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}&hl=en">
                             <i class="fab fa-google-scholar"></i> Google Scholar
                         </a>
                         {% endif %}
-                        
+
                         {% if site.data.profile.github %}
-                        <a class="pr-3 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
+                        <a class="pr-3 no-break" target="_blank"
+                            href="https://github.com/{{ site.data.profile.github }}">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                         {% endif %}
@@ -65,13 +59,15 @@
                         {% endif %}
 
                         {% if site.data.profile.twitter %}
-                        <a class="pr-3 no-break" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
+                        <a class="pr-3 no-break" target="_blank"
+                            href="https://twitter.com/{{ site.data.profile.twitter }}">
                             <i class="fab fa-twitter"></i> Twitter
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.linkedin %}
-                        <a class="pr-3 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
+                        <a class="pr-3 no-break" target="_blank"
+                            href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                         {% endif %}
@@ -81,10 +77,18 @@
                             <i class="fab fa-orcid"></i> ORCID
                         </a>
                         {% endif %}
+                        {% if site.data.profile.email %}
+                        <!-- <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email | encode_email }}"> -->
+                        <i class="fas fa-envelope"></i> <span class="email-text">{{ site.data.profile.email | replace:
+                            "@",
+                            "(at)" }}</span>
+                        <!-- </a> -->
+                        {% endif %}
+
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
 
