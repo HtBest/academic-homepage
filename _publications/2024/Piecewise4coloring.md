@@ -2,7 +2,7 @@
 title: "A Piecewise Approach for the Analysis of Exact Algorithms"
 date: 2024-02-12 00:01:00 +0800
 selected: true
-pub: "WALCOM 2025"
+pub: "WALCOM"
 # pub_pre:        "Submitted to WALCOM"
 # pub_post:       'Under review.'
 pub_last: ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
