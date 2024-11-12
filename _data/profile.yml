@@ -21,7 +21,7 @@ orcid: 0000-0002-1742-3937
 
 short_bio: >-
   <p>
-      I am an Honours student at UNSW, fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a>. 
+      I am an Honours student and research assistant at UNSW, fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a>. 
   </p>
   <p>
       My research interests lie in theoretical computer science, with a focus on algorithms, fine-grained complexity and computational social choice.
@@ -35,7 +35,7 @@ portrait_caption: >-
 education:
 - name: University of New South Wales
   logo: /assets/images/badges/unswsquare.png
-  position: Bachelor (Honours) Student and Research Assistant in Computer Science
+  position: Bachelor (Honours) Student in Computer Science
   date: 2021 - 2025
 
 # experience:
