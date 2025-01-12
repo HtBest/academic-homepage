@@ -1,6 +1,6 @@
 ---
 title: "A Piecewise Approach for the Analysis of Exact Algorithms"
-date: 2024-02-12 00:01:00 +0800
+date: 2025-03-02 00:01:00 +0800
 selected: true
 pub: "WALCOM"
 # pub_pre:        "Submitted to WALCOM"

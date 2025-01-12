@@ -1,6 +1,6 @@
 ---
 title: "Fair Allocation of Divisible Goods under Non-Linear Valuations"
-date: 2024-12-20 00:01:00 +0800
+date: 2025-05-19 00:01:00 +0800
 selected: true
 pub: "AAMAS"
 # pub_pre:        "Submitted to WALCOM"
