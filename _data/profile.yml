@@ -2,10 +2,14 @@ primary_name: "Tao Zixu He"
 secondary_name: ""
 navbar_name: "Tao He"
 
+# positions:
+# - logo: https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png  # Logo is optional
+#   name: UNSW Sydney
 positions:
-- logo: https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png  # Logo is optional
-  name: UNSW Sydney
-# - name: Position 2 without logo
+- logo: https://www.umass.edu/university-relations/sites/default/files/styles/tile_max_250px/public/2023-12/Medium-PMS_202%20%281%29.png?itok=7CKtiUtN
+  name: UMass Amherst
+# - logo: https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png  # Logo is optional
+#   name: UNSW Sydney
 
 
 email: "tao(dot)he@student.unsw.edu.au"
@@ -21,10 +25,16 @@ orcid: 0000-0002-1742-3937
 
 short_bio: >-
   <p>
-      I am an Honours student at UNSW, fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a>. 
+      I am a first year PhD student in UMass Amherst's <a href="https://www.cics.umass.edu/">Manning College of Information and Computer Sciences</a>, advised by <a href="https://people.cs.umass.edu/~cmusco/">Cameron Musco</a>.
   </p>
   <p>
-      My research interests lie in theoretical computer science, with a focus on algorithms, fine-grained complexity and computational social choice.
+      (I believe) I completed Bachelor degree at UNSW, fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a>. 
+  </p>
+  <p>
+      My research interests lie in theoretical computer science, with a focus on algorithms, complexity theory and computational social choice.
+  </p>
+  <p>
+      This website is under maintenance, I will update it when I have time.
   </p>
 
 
@@ -33,6 +43,11 @@ portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
+- name: University of Massachusetts Amherst
+  logo: https://www.umass.edu/university-relations/sites/default/files/styles/tile_max_250px/public/2023-12/Medium-PMS_202%20%281%29.png?itok=7CKtiUtN
+  position: Ph.D. in Computer Science
+  date: 2025 - Present
+
 - name: University of New South Wales
   logo: /assets/images/badges/unswsquare.png
   position: Bachelor (Honours) Student in Computer Science
