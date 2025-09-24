@@ -12,7 +12,7 @@ positions:
 #   name: UNSW Sydney
 
 
-email: "tao(dot)he@student.unsw.edu.au"
+email: "taohe at umass dot edu"
 # cv_link: link-to-your-cv-file
 gscholar: W7lgt2EAAAAJ&hl=en
 github: htbest
@@ -25,22 +25,20 @@ orcid: 0000-0002-1742-3937
 
 short_bio: >-
   <p>
-      I am a first year PhD student in UMass Amherst's <a href="https://www.cics.umass.edu/">Manning College of Information and Computer Sciences</a>, advised by <a href="https://people.cs.umass.edu/~cmusco/">Cameron Musco</a>.
+      I am a first-year PhD student in the <a href="https://www.cics.umass.edu/">Manning College of Information and Computer Sciences</a> at UMass Amherst, advised by <a href="https://people.cs.umass.edu/~cmusco/">Cameron Musco</a>.
+      Previously, I completed my Bachelor's degree at UNSW, where I was fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a> and worked as a research assistant with <a href="https://sites.google.com/site/harisaziz/">Haris Aziz</a> and <a href="https://www.unsw.edu.au/staff/jiaojiao-jiang">Jiaojiao Jiang</a>.
   </p>
   <p>
-      (I believe) I completed Bachelor degree at UNSW, fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a>. 
+      My research interests are in theoretical computer science, particularly algorithms, complexity theory, and computational social choice.
   </p>
   <p>
-      My research interests lie in theoretical computer science, with a focus on algorithms, complexity theory and computational social choice.
-  </p>
-  <p>
-      This website is under maintenance, I will update it when I have time.
+      This website is currently under maintenance and will be updated as time allows.
   </p>
 
 
 portrait_url: /assets/images/photos/profile.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+# portrait_caption: >-
+#   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
 - name: University of Massachusetts Amherst
@@ -62,7 +60,7 @@ education:
 
 awards:
 - name: <a href="https://www.unsw.edu.au/engineering/student-life/prizes-awards/deans-honours-list-deans-award-recipients-archive">UNSW Engineering Dean’s Honours List</a>
-  date: 2023
+  date: 2023 & 2024
 - name: <a href="https://ieeextreme.org/ieeextreme-17-0-ranking/">6th Place worldwide and 1st in Australia in IEEEXtreme</a>
   date: 2023
 - name: 1st Place in <a href="https://icpc.global/">ICPC</a> Regional Finals

@@ -1,20 +1,20 @@
 ---
-title:          "A Faster FPT Algorithm for Vertex Cover on Subcubic Graphs: A Randomized Automated Approach"
-date:           2024-09-27 00:01:00 +0800
-selected:       true
+title: "A Faster Algorithm for Vertex Cover: A Randomized Automated Approach"
+date: 2024-09-27 00:01:00 +0800
+selected: true
 # pub:            "arXiv"
-pub_pre:        "Submitted to STACS"
+# pub_pre: "Submitted to STACS"
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
-pub_date:       "2025"
+# pub_last: ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
+# pub_date: "2026"
 
 abstract: >-
-    In this paper, we present a novel algorithm for solving the Vertex Cover problem on subcubic graphs in \(O(1.1313^k)\), beating the previous best running time of \(O(1.1442^k)\) due to Harris and Narayanaswamy (2022). We achieve this by combining two contributions of independent interest: 1) developing a new framework for the automated design of branching algorithms based on the idea of case analysis of local structures, and 2) introducing an extension of Measure & Conquer to randomized branching algorithms.
-cover:          /assets/images/covers/generatingVC3.jpg
+  This work introduces two techniques for the design and analysis of branching algorithms, illustrated through the case study of the Vertex Cover problem. First, we present a method for automatically generating branching rules through a systematic case analysis of local structures. Second, we develop a new technique for analyzing randomized branching algorithms using the \MCfull method, offering greater flexibility in formulating branching rules. By combining these innovations with additional techniques, we obtain the fastest known randomized algorithms in different parameters for the Vertex Cover problem on graphs with bounded degree (up to 6) and on general graphs. For example, our algorithm solves Vertex Cover on subcubic graphs in \(O(1.07625^n)\) time and \(O(1.13132^k)\) time, respectively. For graphs with maximum degree 4, we achieve running times of \(O(1.13735^n)\) and \(O(1.21103^k)\), while for general graphs we achieve \(O(1.25281^k)\).
+cover: /assets/images/covers/generatingVC3.jpg
 authors:
   - Katie Clinch
   - Serge Gaspers
-  - Zixu He
+  - Tao Zixu He
   - Simon Mackenzie
   - Tiankuang Zhang
 links:

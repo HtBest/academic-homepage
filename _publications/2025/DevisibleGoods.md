@@ -18,6 +18,6 @@ authors:
   - Xinhang Lu
   - Kaiyang Zhou
 links:
-#   arXiv: https://arxiv.org/abs/2402.10015
+  PDF: https://cgi.cse.unsw.edu.au/~haziz/nonlinear.pdf
 #   Code: https://github.com/AlgorithmsWorkingGroup/coloring_pwa
 ---
