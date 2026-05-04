@@ -1041,7 +1041,7 @@
       display: flex;
       gap: 8px;
     }
-    .controls button, .notes-toggle {
+    .controls button {
       border: 1px solid rgba(15,23,42,.16);
       background: rgba(255,255,255,.78);
       color: var(--ink);
@@ -1052,28 +1052,7 @@
       cursor: pointer;
       backdrop-filter: blur(10px);
     }
-    .controls button:hover, .notes-toggle:hover { background: rgba(255,255,255,.96); }
-    aside.notes { display: none; }
-    .notes-panel {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 80px;
-      max-height: 280px;
-      overflow: auto;
-      border: 1px solid rgba(15,23,42,.18);
-      background: rgba(255,255,255,.97);
-      color: var(--ink);
-      border-radius: 24px;
-      padding: 22px 26px;
-      box-shadow: 0 24px 80px rgba(15,23,42,.18);
-      z-index: 80;
-      display: none;
-      font-size: 20px;
-      line-height: 1.35;
-    }
-    .notes-panel.open { display: block; }
-    .notes-panel strong { color: var(--accent); }
+    .controls button:hover { background: rgba(255,255,255,.96); }
     .mjx-svg-href { fill: currentColor; }
     mjx-container[display="true"] { margin: .35em 0 !important; }
     .compact-eq mjx-container[display="true"] { margin: .1em 0 !important; }
@@ -1082,8 +1061,7 @@
       .stage-shell { position: static; width: auto; height: auto; transform: none !important; overflow: visible; box-shadow: none; }
       .deck { position: static; height: auto; overflow: visible; }
       .slide { position: relative; opacity: 1 !important; transform: none !important; page-break-after: always; min-height: var(--slide-height); color: black; }
-      .controls, .progress, .notes-panel { display: none !important; }
-      aside.notes { display: block; color: black; margin-top: 20px; font-size: 16px; opacity: .75; }
+      .controls, .progress { display: none !important; }
     }
   </style>
   <script>
@@ -1407,9 +1385,8 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
 
     </main>
 
-    <div class="footer"><span id="slideName">Title</span><span>←/→ navigate · N notes · 8 slides</span><span id="slideNo">1 / 8</span></div>
-    <div class="controls"><button id="prevBtn" aria-label="Previous slide">←</button><button id="notesBtn" aria-label="Toggle notes">Notes</button><button id="nextBtn" aria-label="Next slide">→</button></div>
-    <div class="notes-panel" id="notesPanel"></div>
+    <div class="footer"><span id="slideName">Title</span><span>←/→ navigate · 8 slides</span><span id="slideNo">1 / 8</span></div>
+    <div class="controls"><button id="prevBtn" aria-label="Previous slide">←</button><button id="nextBtn" aria-label="Next slide">→</button></div>
   </div>
 
   <script>
@@ -1420,7 +1397,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
     const progressBar = document.getElementById('progressBar');
     const slideNo = document.getElementById('slideNo');
     const slideName = document.getElementById('slideName');
-    const notesPanel = document.getElementById('notesPanel');
     let current = 0;
 
     function fitStage() {
@@ -1443,7 +1419,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
       progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
       slideNo.textContent = `${current + 1} / ${slides.length}`;
       slideName.textContent = slides[current].dataset.title || '';
-      if (notesPanel.classList.contains('open')) updateNotes();
       const target = `#slide-${current + 1}`;
       if (window.location.hash !== target) history.replaceState(null, '', target);
     }
@@ -1451,21 +1426,11 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
       current = Math.min(slides.length - 1, Math.max(0, current + delta));
       render();
     }
-    function updateNotes() {
-      const note = slides[current].querySelector('aside.notes');
-      notesPanel.innerHTML = `<strong>Speaker notes — slide ${current + 1}</strong><br>${note ? note.innerHTML : ''}`;
-    }
-    function toggleNotes() {
-      notesPanel.classList.toggle('open');
-      if (notesPanel.classList.contains('open')) updateNotes();
-    }
     document.getElementById('prevBtn').addEventListener('click', () => go(-1));
     document.getElementById('nextBtn').addEventListener('click', () => go(1));
-    document.getElementById('notesBtn').addEventListener('click', toggleNotes);
     window.addEventListener('keydown', (e) => {
       if (['ArrowRight','PageDown',' '].includes(e.key)) { e.preventDefault(); go(1); }
       if (['ArrowLeft','PageUp'].includes(e.key)) { e.preventDefault(); go(-1); }
-      if (e.key.toLowerCase() === 'n') { e.preventDefault(); toggleNotes(); }
       if (e.key === 'Home') { current = 0; render(); }
       if (e.key === 'End') { current = slides.length - 1; render(); }
     });
