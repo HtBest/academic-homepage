@@ -962,6 +962,48 @@
       width: 100%;
       height: 100%;
     }
+    .takeaway-copy {
+      display: grid;
+      gap: 22px;
+      align-content: center;
+    }
+    .takeaway-copy ul.clean {
+      font-size: 29px;
+      line-height: 1.14;
+    }
+    .takeaway-copy ul.clean li {
+      margin: 14px 0;
+    }
+    .takeaway-qr {
+      width: min(100%, 520px);
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 20px;
+      align-items: center;
+      padding: 16px 18px;
+      border: 1px solid rgba(4,124,154,.2);
+      border-radius: 20px;
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 16px 38px rgba(15,23,42,.1);
+      color: inherit;
+      text-decoration: none;
+    }
+    .qr-code {
+      display: block;
+      width: 174px;
+      height: 174px;
+      padding: 10px;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,.12);
+    }
+    .takeaway-qr span {
+      color: var(--ink);
+      font-size: 23px;
+      line-height: 1.12;
+      font-weight: 860;
+      text-wrap: balance;
+    }
     .footer {
       position: absolute;
       left: 78px;
@@ -1105,7 +1147,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           <p class="speaker">Tao He</p>
         </div>
       </div>
-      <aside class="notes">Open with the framing. This is an online selection problem, like secretary or prophet-inequality settings, but there are three extra ingredients: feasibility is a matroid, the algorithm can choose the order, and it has predicted weights. The talk is about how to use predictions cautiously instead of trusting them blindly.</aside>
     </section>
 
     <section class="slide" data-title="Motivation">
@@ -1127,7 +1168,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           <p>Before the online phase we get guessed weights \(\widehat w(e)\). They may be excellent, or completely misleading.</p>
         </div>
       </div>
-      <aside class="notes">This slide connects to what the audience already knows. The common theme is online irrevocable choice. The new challenge is that feasibility has structure and predictions are available. The goal is not only to exploit good predictions, but also to avoid being destroyed by bad ones.</aside>
     </section>
 
     <section class="slide model-slide" data-title="Matroid + free order">
@@ -1173,7 +1213,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           </div>
         </div>
       </div>
-      <aside class="notes">Keep the model introduction compact. For matroids, emphasize independence and exchange rather than examples. For free order, emphasize that the algorithm chooses the next element, but every revealed weight still requires an immediate irreversible decision. Also introduce the no-prediction black-box robust algorithm without discussing the later fallback callout on this slide.</aside>
     </section>
 
     <section class="slide" data-title="Why risky">
@@ -1203,7 +1242,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           </div>
         </div>
       </div>
-      <aside class="notes">This is the central reason predictions are nontrivial in the paper. A predicted basis is natural, but decisions are not neutral. Following a wrong recommendation can change the residual problem before the algorithm notices the prediction was wrong.</aside>
     </section>
 
     <section class="slide" data-title="Exchange certificate">
@@ -1247,7 +1285,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           <div class="price-chip">If \(e\) conflicts with \(b_1,b_2,b_3\), then \(\hat\tau(e)=\min\{9,5,7\}=5\).</div>
         </div>
       </div>
-      <aside class="notes">Explain this slide as a sequence, not as definitions. We first compute the predicted basis. Then, for an outside element, adding it creates a fundamental circuit, which identifies the basis elements that could be removed to make room. The threshold tau is the cheapest predicted blocker. If the true value of the outside element is much larger than that price, the prediction is locally suspicious. If all these local swap tests look good, a basis-exchange argument says the predicted basis is globally good.</aside>
     </section>
 
     <section class="slide" data-title="Algorithm">
@@ -1279,7 +1316,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           <div class="panel">We show that <span class="accent">random probing</span> makes the first error occurs very early, \(\frac 13\) value remaining in expecation.</div>
         </div>
       </div>
-      <aside class="notes">The algorithm is simple at the level of this talk. It computes the predicted basis and local tests. It probes elements in a uniformly random order, even though the model allows any order. While the revealed true weights agree with the local prediction tests, it follows the predicted basis. At the first suspicious element, it stops using the predictions and runs a known robust free-order matroid secretary algorithm on the remaining residual instance.</aside>
     </section>
 
     <section class="slide" data-title="Guarantee">
@@ -1299,7 +1335,6 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
           <div class="soft-formula amber"><span class="ratio-label">robust ratio</span>\(\displaystyle \frac{1}{24}\)</div>
         </div>
       </div>
-      <aside class="notes">This slide replaces the heavy theorem statement. In the good-prediction regime, if epsilon_M is at most theta, no switch occurs and the returned predicted basis has approximation ratio (1-epsilon_M)/(1+epsilon_M). In the bad or arbitrary-prediction regime, the theorem gives a 1/24 robust ratio. The main mechanism is random prefix plus robust residual algorithm.</aside>
     </section>
 
     <section class="slide" data-title="Takeaways">
@@ -1352,14 +1387,22 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.mhchemParser=void 0;var r=fun
             </g>
           </svg>
         </div>
-        <ul class="clean">
-          <li>Trust predictions until a mistake appears.</li>
-          <li>Use matroid structures to estimate exchange errors.</li>
-          <li>Free order is used to choose a random probing order & used in black box algorithm.</li>
-          <li>The algorithm is near-optimal with good predictions and robust with bad predictions.</li>
-        </ul>
+        <div class="takeaway-copy">
+          <ul class="clean">
+            <li>Trust predictions until a mistake appears.</li>
+            <li>Use matroid structures to estimate exchange errors.</li>
+            <li>Free order is used to choose a random probing order & used in black box algorithm.</li>
+            <li>The algorithm is near-optimal with good predictions and robust with bad predictions.</li>
+          </ul>
+          <a class="takeaway-qr" href="https://tao-he.com/690AG-slides/" aria-label="Open slides at tao-he.com/690AG-slides">
+            <svg class="qr-code" viewBox="0 0 37 37" shape-rendering="crispEdges" role="img" aria-label="QR code for https://tao-he.com/690AG-slides/">
+              <path fill="#ffffff" d="M0 0h37v37H0z"/>
+              <path stroke="#000000" d="M4 4.5h7m1 0h2m2 0h4m2 0h1m1 0h1m1 0h7M4 5.5h1m5 0h1m1 0h1m1 0h1m1 0h2m2 0h2m2 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h1m1 0h1m4 0h1m1 0h2m2 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m1 0h4m2 0h2m4 0h1m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m3 0h2m1 0h1m1 0h6m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 11.5h2m5 0h4m1 0h1M4 12.5h1m1 0h2m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h2M4 13.5h1m1 0h2m3 0h1m1 0h3m1 0h3m1 0h3m1 0h4m3 0h1M7 14.5h1m1 0h3m1 0h1m2 0h2m2 0h3m1 0h1m1 0h1m3 0h2M6 15.5h1m1 0h2m2 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h3m3 0h1M5 16.5h8m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m4 0h2M4 17.5h2m1 0h2m2 0h1m2 0h1m3 0h1m1 0h5m1 0h2m2 0h3M4 18.5h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h1m1 0h3m1 0h6m1 0h3M4 19.5h6m1 0h1m1 0h3m2 0h1m1 0h1m2 0h2m2 0h1m3 0h1M4 20.5h1m1 0h1m3 0h3m1 0h1m3 0h2m2 0h3m2 0h3m1 0h1M8 21.5h1m2 0h6m1 0h1m1 0h2m5 0h1m1 0h3M4 22.5h1m1 0h1m3 0h4m3 0h4m3 0h1m1 0h3m1 0h1M6 23.5h1m2 0h1m1 0h1m1 0h3m1 0h5m4 0h2m2 0h1M5 24.5h6m3 0h9m1 0h7M12 25.5h1m8 0h2m1 0h1m3 0h5M4 26.5h7m1 0h1m2 0h2m1 0h1m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1M4 27.5h1m5 0h1m1 0h3m2 0h4m1 0h1m1 0h1m3 0h2m2 0h1M4 28.5h1m1 0h3m1 0h1m4 0h2m2 0h3m2 0h5m1 0h2M4 29.5h1m1 0h3m1 0h1m1 0h2m1 0h3m1 0h3m1 0h1m1 0h1m1 0h3m2 0h1M4 30.5h1m1 0h3m1 0h1m1 0h4m2 0h1m3 0h1m1 0h1m2 0h1m2 0h1m1 0h1M4 31.5h1m5 0h1m5 0h2m1 0h2m1 0h1m1 0h2m2 0h2m1 0h1M4 32.5h7m1 0h2m4 0h1m3 0h5m2 0h1m1 0h1"/>
+            </svg>
+            <span>Scan QR code to access this slides</span>
+          </a>
+        </div>
       </div>
-      <aside class="notes">Close by restating the design principle. The predicted basis is not trusted blindly. It is tested locally through exchange thresholds, and the algorithm switches as soon as the evidence breaks. The random order is what makes the switch robust. This is a learning-augmented online algorithm in the consistency-robustness style.</aside>
     </section>
 
     </main>
