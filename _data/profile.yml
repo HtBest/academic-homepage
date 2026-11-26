@@ -6,7 +6,7 @@ navbar_name: "Tao He"
 # - logo: https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png  # Logo is optional
 #   name: UNSW Sydney
 positions:
-- logo: https://www.umass.edu/university-relations/sites/default/files/styles/tile_max_250px/public/2023-12/Medium-PMS_202%20%281%29.png?itok=7CKtiUtN
+- logo: /assets/images/badges/umass.png
   name: UMass Amherst
 # - logo: https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png  # Logo is optional
 #   name: UNSW Sydney
@@ -25,14 +25,11 @@ orcid: 0000-0002-1742-3937
 
 short_bio: >-
   <p>
-      I am a first-year PhD student in the <a href="https://www.cics.umass.edu/">Manning College of Information and Computer Sciences</a> at UMass Amherst, advised by <a href="https://people.cs.umass.edu/~cmusco/">Cameron Musco</a>.
+      I am a second-year PhD student in the <a href="https://www.cics.umass.edu/">Manning College of Information and Computer Sciences</a> at UMass Amherst, advised by <a href="https://people.cs.umass.edu/~cmusco/">Cameron Musco</a>.
       Previously, I completed my Bachelor's degree at UNSW, where I was fortunate to be supervised by <a href="https://serggasp.github.io">Serge Gaspers</a> and <a href="https://scholar.google.com.au/citations?user=cBUn3E8AAAAJ&hl=en">Simon Mackenzie</a> and worked as a research assistant with <a href="https://sites.google.com/site/harisaziz/">Haris Aziz</a> and <a href="https://www.unsw.edu.au/staff/jiaojiao-jiang">Jiaojiao Jiang</a>.
   </p>
   <p>
       My research interests are in theoretical computer science, particularly algorithms, complexity theory, and computational social choice.
-  </p>
-  <p>
-      This website is currently under maintenance and will be updated as time allows.
   </p>
 
 
@@ -42,7 +39,7 @@ portrait_url: /assets/images/photos/profile.jpg
 
 education:
 - name: University of Massachusetts Amherst
-  logo: https://www.umass.edu/university-relations/sites/default/files/styles/tile_max_250px/public/2023-12/Medium-PMS_202%20%281%29.png?itok=7CKtiUtN
+  logo: /assets/images/badges/umass.png
   position: Ph.D. in Computer Science
   date: 2025 - Present
 
@@ -59,6 +56,10 @@ education:
 
 
 awards:
+- name: <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering/student-life/prizes-awards">UNSW CSE Most Outstanding Thesis Prize</a>
+  date: 2025
+- name: <a href="https://cphof.org/profile/icpc:Zixu%20He">ICPC World Finalist</a> (25th place at 2024 World Finals; 35th place at 2023 World Finals)
+  date: 2024
 - name: <a href="https://www.unsw.edu.au/engineering/student-life/prizes-awards/deans-honours-list-deans-award-recipients-archive">UNSW Engineering Dean’s Honours List</a>
   date: 2023 & 2024
 - name: <a href="https://ieeextreme.org/ieeextreme-17-0-ranking/">6th Place worldwide and 1st in Australia in IEEEXtreme</a>

@@ -7,11 +7,8 @@ pub: "AAMAS"
 # pub_post:       'Under review.'
 pub_last: ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date: "2025"
+venue_short: "AAMAS"
 
-abstract: >-
-  This paper addresses the division of homogeneous divisible goods among agents with non-linear valuations. We propose an algorithm that guarantees a \(\frac{1}{2n-1}\)-MMS allocation for \(n\) agents with arbitrary non-decreasing valuations and establish the impossibility of exceeding a \(1/n\)-MMS approximation, even with one-breakpoint piecewise-constant valuations. For \(n \leq 3\), the \(1/n\) ratio is proven tight. On envy-freeness, we show that verifying the existence of an EF and Pareto optimal (PO) allocation is NP-hard for \(n\) agents and at least three goods, even with one-breakpoint piecewise-constant valuations. We complement this with a polynomial-time algorithm for checking EF and PO allocations for a single divisible good with piecewise-linear valuations.
-
-cover: /assets/images/covers/divisible.jpg
 authors:
   - Haris Aziz
   - Zixu He
@@ -19,5 +16,6 @@ authors:
   - Kaiyang Zhou
 links:
   PDF: https://cgi.cse.unsw.edu.au/~haziz/nonlinear.pdf
+  arXiv: https://arxiv.org/abs/2607.15613
 #   Code: https://github.com/AlgorithmsWorkingGroup/coloring_pwa
 ---
